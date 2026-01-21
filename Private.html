@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman Edward | Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* ===========================
+   BACK BUTTON
+=========================== */
+.btn-back {
+    display: inline-block;
+    background-color: #00c3ff; /* blue base */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 195, 255, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #009dc7; /* darker blue on hover */
+    box-shadow: 0 6px 16px rgba(0, 195, 255, 0.5);
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
+</style>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Herman Edward</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:history.back()" class="btn-back">← Back</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sign Up Section -->
+    <section class="signup container" style="background-color: #eef8ff; padding: 80px 20px; min-height: 70vh;">
+        <h2 class="title-blue" style="text-align: center;">Sign Up</h2>
+
+        <form id="signupForm" class="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="btn btn-blue">Sign Up</button>
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Herman Smart | <a href="mailto:harmonysmart004@gmail.com">harmonysmart004@gmail.com</a></p>
+    </footer>
+
+<script>
+    // JavaScript for private signup validation
+    const signupForm = document.getElementById('signupForm');
+
+    // Your private credentials
+    const MY_USERNAME = "My_Lullaby";
+    const MY_PASSWORD = "Shakilah@3070!";
+
+    signupForm.addEventListener('submit', function(e){
+        e.preventDefault(); // prevent default form submission
+
+        const usernameInput = document.getElementById('username').value;
+        const passwordInput = document.getElementById('password').value;
+
+        if(usernameInput === MY_USERNAME && passwordInput === MY_PASSWORD){
+            // Redirect directly to upload page
+            window.location.href = "upload.html"; 
+        } else {
+            alert("Invalid credentials! Only you can sign up.");
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman Smart | Upload</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Upload page specific styling */
+        .upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            background: #eef8ff;
+            min-height: 80vh;
+        }
+
+        .upload h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .upload p {
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .upload-form {
+            display: flex;
+            gap: 20px; /* space between columns */
+            justify-content: center;
+            flex-wrap: wrap; /* wrap on small screens */
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .category-box {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 300px; /* fixed width for each column */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,123,255,0.2);
+        }
+
+        .category-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #007bff;
+            text-align: center;
+        }
+
+        .category-box input[type="file"] {
+            display: block;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px dashed #007bff;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .category-box input[type="file"]:hover {
+            background: #e0f0ff;
+            border-color: #0056b3;
+        }
+
+        .btn.btn-blue {
+            padding: 10px 15px;
+            font-weight: 600;
+            border-radius: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s ease;
+            width: 100%;
+        }
+
+        .btn.btn-blue:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,123,255,0.3);
+        }
+
+        @media (max-width: 1024px) {
+            .upload-form {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 960px) {
+            .upload-form {
+                flex-direction: column;
+                align-items: center;
+            }
+            .category-box {
+                width: 90%;
+            }
+        }
+        /* ===========================
+   BACK BUTTON
+=========================== */
+.btn-back {
+    display: inline-block;
+    background-color: #00c3ff; /* blue base */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 195, 255, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #009dc7; /* darker blue on hover */
+    box-shadow: 0 6px 16px rgba(0, 195, 255, 0.5);
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Herman Edward</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:history.back()" class="btn-back">← Back</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="upload">
+        <h2>Upload Your Projects</h2>
+        <p>Choose a file for each category and upload it directly.</p>
+
+<div class="upload-form">
+    <!-- Column 1: Website & System Project -->
+    <form action="upload.php" method="post" enctype="multipart/form-data" class="category-box">
+        <label for="website-project">Website & System Project</label>
+        <input type="file" id="website-project" name="website_project" required>
+        <button type="submit" class="btn btn-blue">Upload</button>
+    </form>
+
+    <!-- Column 2: Graphic Design -->
+    <form action="upload.php" method="post" enctype="multipart/form-data" class="category-box">
+        <label for="graphic-design">Graphic Design</label>
+        <input type="file" id="graphic-design" name="graphic_design" required>
+        <button type="submit" class="btn btn-blue">Upload</button>
+    </form>
+
+    <!-- Column 3: Data Analysis -->
+    <form action="upload.php" method="post" enctype="multipart/form-data" class="category-box">
+        <label for="data-analysis">Data Analysis</label>
+        <input type="file" id="data-analysis" name="data_analysis" required>
+        <button type="submit" class="btn btn-blue">Upload</button>
+    </form>
+</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Herman Smart | <a href="mailto:harmonysmart004@gmail.com">harmonysmart004@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>

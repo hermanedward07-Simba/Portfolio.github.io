@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman Edward | Data Analysis</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background: #111;
+            padding: 15px 0;
+            color: #fff;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        nav a:hover {
+            color: #00c3ff;
+        }
+
+        /* Project Box Layout */
+        .projects-box {
+            width: 90%;
+            max-width: 1300px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        /* Individual Project Card */
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: .4s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project-card h3 {
+            margin: 15px 0 5px;
+        }
+
+        .project-card p {
+            color: #444;
+            font-size: 14px;
+        }
+
+        /* Hover Shine Effect */
+        .project-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            transition: .5s;
+        }
+
+        .project-card:hover::after {
+            left: 0;
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+        }
+
+        footer a {
+            color: #00c3ff;
+            text-decoration: none;
+        }
+
+            /* Blue Theme Colors */
+        :root {
+            --blue-main: #00c3ff;
+            --blue-dark: #009dc7;
+        }
+
+        body {
+            background: #eef8ff;
+        }
+
+        header {
+            background: #111; /* updated to black */
+        }
+
+        nav a:hover {
+            color: var(--blue-main);
+        }
+
+        /* Card Styling Updated */
+        .project-card {
+            border-top: 4px solid var(--blue-main);
+            background: #fff;
+        }
+
+        .project-card h3 {
+            color: var(--blue-dark);
+        }
+
+        /* Hover Shine Effect Updated */
+        .project-card::after {
+            background: rgba(0, 195, 255, 0.15);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25); /* neutral shadow */
+        }
+
+        /* New Feature: Image Zoom */
+        .project-card img {
+            transition: .4s;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.08);
+        }
+
+        /* New Feature: Filter Bar */
+        .filter-bar {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background: var(--blue-main);
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: .3s;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover {
+            background: var(--blue-dark);
+            transform: scale(1.05);
+        }
+
+        /* New Feature: Floating Back-To-Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: var(--blue-dark);
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 50%;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: .3s;
+        }
+
+        .back-to-top:hover {
+            background: var(--blue-main);
+            transform: scale(1.1);
+        }
+
+        /* ===========================
+   BACK BUTTON
+=========================== */
+.btn-back {
+    display: inline-block;
+    background-color: #00c3ff; /* blue base */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 195, 255, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #009dc7; /* darker blue on hover */
+    box-shadow: 0 6px 16px rgba(0, 195, 255, 0.5);
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Herman Edward</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:history.back()" class="btn-back">← Back</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Container -->
+    <div class="projects-box">
+        <div class="project-card">
+            <img src="d1.jpg" alt="Graphic 1">
+            <h3>Graphic Project 1</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d2.jpg" alt="Graphic 2">
+            <h3>Graphic Project 2</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d3.jpg" alt="Graphic 3">
+            <h3>Graphic Project 3</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d4.jpg" alt="Graphic 4">
+            <h3>Graphic Project 4</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d5.jpg" alt="Graphic 5">
+            <h3>Graphic Project 5</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d6.jpg" alt="Graphic 6">
+            <h3>Graphic Project 6</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d7.jpg" alt="Graphic 7">
+            <h3>Graphic Project 7</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d8.jpg" alt="Graphic 8">
+            <h3>Graphic Project 8</h3>
+            <p>Brief description of the project.</p>
+        </div>
+        <div class="project-card">
+            <img src="d9.jpg" alt="Graphic 8">
+            <h3>Graphic Project 8</h3>
+            <p>Brief description of the project.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact me at: <a href="mailto:harmonysmart004@gmail.com">harmonysmart004@gmail.com</a></p>
+    </footer>
+</body>
+</html>

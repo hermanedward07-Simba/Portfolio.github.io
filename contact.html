@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman Edward | Contact</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Header */
+        header {
+            background: #111;
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: .3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #00c3ff;
+        }
+
+        /* Contact Section */
+        #contact {
+            margin-top: 40px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+
+        #contact h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        #contact p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 17px;
+        }
+
+        /* Contact Boxes */
+        .contact-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .contact-box {
+            background: #111;
+            color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: .3s;
+        }
+
+        .contact-box:hover {
+            background: #00c3ff;
+            color: #000;
+            transform: translateY(-5px);
+        }
+
+        .contact-box a {
+            color: #fff;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        .contact-box:hover a {
+            color: #000;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: #f1f1f1;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: .3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #00c3ff;
+        }
+
+        .contact-form button {
+            background: #00c3ff;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .contact-form button:hover {
+            background: #009dc7;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+        }
+
+        footer a {
+            color: #00c3ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+            /* Extra Enhancements */
+        .contact-box {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-box::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.15);
+            transition: .5s;
+        }
+
+        .contact-box:hover::after {
+            left: 0;
+        }
+
+        /* Subtle Fade-in Animation */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        #contact h2, #contact p, .contact-boxes, .contact-form {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .floating-whatsapp:hover {
+            background: #1da851;
+            transform: scale(1.05);
+        }
+/* ===========================
+   BACK BUTTON
+=========================== */
+.btn-back {
+    display: inline-block;
+    background-color: #00c3ff; /* blue base */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 195, 255, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #009dc7; /* darker blue on hover */
+    box-shadow: 0 6px 16px rgba(0, 195, 255, 0.5);
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Herman Edward</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="javascript:history.back()" class="btn-back">← Back</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <h2 style="color: #009dc7;">Contact Me</h2>
+        <p>Feel free to reach out via any of the methods below:</p>
+
+        <div class="contact-boxes">
+            <!-- Email Box -->
+            <div class="contact-box">
+                <h3>Email</h3>
+                <p>Send me an email:</p>
+                <a href="mailto:harmonysmart004@gmail.com">harmonysmart004<br>@gmail.com</a>
+            </div>
+
+            <!-- WhatsApp Box -->
+            <div class="contact-box">
+                <h3>WhatsApp</h3>
+                <p>Message me directly:</p>
+                <a href="https://wa.me/0754657240" target="_blank">Chat on WhatsApp</a>
+            </div>
+
+            <!-- Phone Box -->
+            <div class="contact-box">
+                <h3>Call Me</h3>
+                <p>Direct phone call:</p>
+                <a href="tel:+255616717940">+255 616 717 940</a>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form id="contactForm" class="contact-form">
+            <h3>Or Send a Message:</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact me at: <a href="mailto:harmonysmart004@gmail.com">harmonysmart004@gmail.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman Edward | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* ===========================
+   BACK BUTTON
+=========================== */
+.btn-back {
+    display: inline-block;
+    background-color: #00c3ff; /* blue base */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 195, 255, 0.3);
+}
+
+.btn-back:hover {
+    background-color: #009dc7; /* darker blue on hover */
+    box-shadow: 0 6px 16px rgba(0, 195, 255, 0.5);
+    transform: translateY(-3px); /* subtle lift effect */
+}
+
+</style>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <h1 class="logo">Herman Edward</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="contact.html">Contact</a>
+                <a href="javascript:history.back()" class="btn-back">← Back</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio container" style="background-color: #eef8ff; padding: 60px 20px;">
+        <h2 style="color: #00c3ff;">My Portfolio</h2>
+        <p class="subtitle-blue">Explore my work in three main areas of expertise:</p>
+
+        <div class="portfolio-buttons">
+            <a href="graphics.html" class="portfolio-btn btn-blue">Graphics Design Projects</a>
+            <a href="websites.html" class="portfolio-btn btn-blue">Websites & Systems Projects</a>
+            <a href="data_science.html" class="portfolio-btn btn-blue">Data Analysis Projects</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Herman Smart | <a href="mailto:harmonysmart004@gmail.com">harmonysmart004@gmail.com</a></p>
+    </footer>
+
+</body>
+</html>
